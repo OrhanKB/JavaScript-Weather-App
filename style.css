@@ -29,8 +29,8 @@ body {
     border: 0;
     outline: 0;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     
 }
@@ -89,4 +89,5 @@ img {
 .desc {
     width: 100px;
     height: 100px;
+    margin-top: 10px;
 }
