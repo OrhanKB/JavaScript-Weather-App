@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app">
+        <h1>Weather App</h1>
+        <div class="content">
+            <input type="text" id="text" placeholder="City" class="text">
+            <button class="button" id="button"><img src="js/img/magnifying.png.svg" alt=""></button>
+        </div>
+        <div class="details">
+            <!-- <img src="" class="desc" id="pic"> -->
+            <img src="" class="desc" id="pic" style="width: 100px; height: 100px;">
+            <h2 class="city"></h2>
+            <div class="weather">
+            <div class="temp">
+                <div class="two">
+                <img src="js/img/temperature-three-quarters-solid.svg" alt="">
+                <div id="temp" class="temp"> </div>
+                </div>
+                <div id="weath" class="weath"></div>
+            </div>
+            <div class="min-max">
+                <div class="two">
+                <img src="js/img/arrow-down-sign-to-navigate.png" alt="">
+                <div id="min" class="temp-min"></div>
+            </div>
+            <div class="two">
+                <img src="js/img/arrow-up.png" alt="">
+                <div id="max" class="temp-max"></div>
+            </div>
+            </div>
+            <div class="wind-humidity">
+                <div class="two">
+                <img src="js/img/wind.png" alt="">
+                <div id="wind" class="wind"> </div>
+            </div>
+            <div class="two">
+                <img src="js/img/humidity.png" alt="">
+                <div id="humidity" class="humidity"></div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>    
+    
+</body>
+</html>
