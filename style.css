@@ -91,3 +91,48 @@ img {
     height: 100px;
     margin-top: 10px;
 }
+
+/***** FIRST AREA ****/
+.first-area {
+    background-image: linear-gradient(to left top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    border-radius: 20px;
+    width: 500px;
+    height: 150px;
+    font-family: sans-serif;
+    margin-top: 200px; 
+
+
+}
+
+.first-text {
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    border: 0;
+    outline: 0;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.first-button {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.first-content {
+    margin-top: 45px;
+}
+
+/***** FIRST AREA ****/
+
+@media (max-width: 767px) {
+    /* Styles for mobile screens */
+  }
+  
+  @media (min-width: 359px) {
+    /* Styles for wider screens */
+  }
