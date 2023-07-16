@@ -1,5 +1,5 @@
    const APIUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-   const APIKey = ""
+   const APIKey = " "
 
    //divs
    const firstDiv = document.querySelector(".first-area")
