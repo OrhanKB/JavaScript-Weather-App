@@ -29,7 +29,7 @@ const APIKey = ""
    const fetchAPI = async (city) => {
       try {
 
-         const res = await fetch(APIUrl +  /*city*/encodedCity + `&appid=${APIKey}`)
+         const res = await fetch(APIUrl +  city + `&appid=${APIKey}`)
          const data = await res.json()
 
          //DOC
