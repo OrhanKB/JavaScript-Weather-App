@@ -31,6 +31,7 @@ const APIKey = "e646d11a4a815b19ff39e2fbe05ba8b8"
       
       try {
          const res = await fetch(APIUrl +  city + `&appid=${APIKey}`)
+
          
           if(res.status == 404) {
             error.setAttribute("style", "color:white; margin-top:26px")
