@@ -8,60 +8,78 @@
 </head>
 <body>
 
-<div class="first-area">
-    <div class="first-content">
-        <input class="first-text" type="text" placeholder="Enter a city name">
-        <button class="first-button" ><img src="js/img/magnifying.png.svg" alt=""></button>
+
+
+
+
+<div class="textarea">
+    <input type="text" class="text" required="required">
+    <button class="btn"><img src="js/img/search.png" alt=""></button>
+    <span>Location</span>
+    
+</div>
+
+<div class="error">
+    invalid city
+</div>
+
+
+<div class="second">
+
+<div class="app">
+
+    <div class="left">
+        <h2 class="heat"></h2>
+        <h2 class="city"></h2>
+    </div>
+
+    <div class="right">
+
+            <div class="image">
+            <img class="img" src="" alt="">
+        </div>
+        <p class="description"></p>
+
+        <div class="details">
+            <div class="humidity">
+                <img src="js/img/humidity (1).png" alt="">
+                <div class="hum-num">
+                    
+                </div>
+            </div>
+            
+            <div class="wind">
+                <img src="js/img/wind (2).png" alt="">
+                <div class="wind-num">
+                    
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
 
 
- 
-     <div class="app">
-        <h1>Weather App</h1>
-        <div class="content">
-            <input type="text" id="text" placeholder="City" class="text">
-            <button class="button" id="button"><img src="js/img/magnifying.png.svg" alt=""></button>
-        </div>
-        <div class="error">
-            enter valid city
-        </div>
-        <div class="details">
-             
-            <img src="" class="desc" id="pic" style="width: 100px; height: 100px;">
-            <h2 class="city"></h2>
-            <div class="weather">
-            <div class="temp">
-                <div class="two">
-                <img src="js/img/temperature-three-quarters-solid.svg" alt="">
-                <div id="temp" class="temp"> </div>
-                </div>
-                <div id="weath" class="weath"></div>
-            </div>
-            <div class="min-max">
-                <div class="two">
-                <img src="js/img/arrow-down-sign-to-navigate.png" alt="">
-                <div id="min" class="temp-min"></div>
-            </div>
-            <div class="two">
-                <img src="js/img/arrow-up.png" alt="">
-                <div id="max" class="temp-max"></div>
-            </div>
-            </div>
-            <div class="wind-humidity">
-                <div class="two">
-                <img src="js/img/wind.png" alt="">
-                <div id="wind" class="wind"> </div>
-            </div>
-            <div class="two">
-                <img src="js/img/humidity.png" alt="">
-                <div id="humidity" class="humidity"></div>
-            </div>
-            </div>
-            </div>
-        </div>
-    </div> 
+
+<div class="bottom">
+    <div class="min-c">
+        Min:
+    </div>
+    <div class="max-c">
+         Max:
+    </div>
+    <div class="humidity-c">
+         Humidity:
+    </div>
+    <div class="wind-c">
+         Wind:
+    </div>
+    
+</div>
+
+</div>
+
 
     <script src="js/script.js"></script>    
     
