@@ -15,25 +15,38 @@ const second = document.querySelector(".second")
     
     try {
         const res = await fetch( APIUrl + city + `&appid=${APIKey}`);
-        
         if(res.status == 404) {
-            error.style.display = "flex"
+             error.style.display = "flex"
             second.style.display= "none"
+            bottomBtn.style.display="none"
+            
         } else {
             const data = await res.json();
-            second.style.display="flex"
+             second.style.display="flex"
             error.style.display ="none"
+            
+            
 
         
             const weather = data.weather[0].main
         //DOC
         const heat = document.querySelector(".heat").innerHTML = Math.round(data.main.temp) +` °C`
+
         const cityName = document.querySelector(".city");
-        cityName.innerHTML = data.name.split(" ").shift().toUpperCase();
-        const cityNameWidth = cityName.getBoundingClientRect().width;
+        if(data.name.split(" ")[1] === "Province") {
+            cityName.innerHTML = data.name.split(" ").shift().toUpperCase()
+        } else {
+            cityName.innerHTML = data.name.toUpperCase()
+        }
+         
+        let cityNameWidth = cityName.getBoundingClientRect().width;
         const leftDiv = document.querySelector(".left")
         const leftWidth = leftDiv.getBoundingClientRect().width
-        
+        if(cityNameWidth > leftWidth) {
+            cityName.style.fontSize = "20px"
+        } else {
+            cityName.removeAttribute("style")
+        }
         
         
         
@@ -41,10 +54,7 @@ const second = document.querySelector(".second")
         const humidity = document.querySelector(".hum-num").innerHTML = data.main.humidity + ` %`
         const wind = document.querySelector(".wind-num").innerHTML = data.wind.speed + ` km/h`
         const desc = document.querySelector(".description").innerHTML = data.weather[0].main
-        const min = document.querySelector(".min-c")
-        const max = document.querySelector(".max-c")
-        const hum = document.querySelector(".humidity-c")
-        const win = document.querySelector(".wind-c")
+        
         //DOC
 
     
@@ -53,6 +63,13 @@ const second = document.querySelector(".second")
         const sunSet = new Date(data.sys.sunset * 1000)
         const sunRise = new Date(data.sys.sunrise * 1000)
         //DAY-NIGHT
+        
+        // BOTTOM DIV
+        const min = document.querySelector(".min-c").innerHTML = `Min: `+ data.main.temp_min + ` °C` 
+        const max = document.querySelector(".max-c").innerHTML =  `Max: ` + data.main.temp_max + ` °C`
+        const hum = document.querySelector(".humidity-c").innerHTML = `Humidity: ` + data.main.humidity + ` %`
+        const win = document.querySelector(".wind-c").innerHTML = `Wind: ` + data.wind.speed + ` km/h`
+        //BOTTOM DIV
 
 
 
@@ -97,16 +114,30 @@ const second = document.querySelector(".second")
     }
    }
    
+  
+    
+   
+    const bottom = document.querySelector(".bottom")
+   const bottomBtn = document.querySelector(".bottom-btn");
+const bottomBtnImg = document.querySelector(".btn-image");
+
+console.log( bottomBtn.addEventListener("click", () => {
+  const currentMarginTop = parseFloat(bottom.style.marginTop);
+  bottom.style.marginTop = currentMarginTop === 210 ? "168px" : "210px";
+}) )
+   
 
     btn.addEventListener("click", e => {
-        fetchAPI(text.value)
+        fetchAPI(text.value);
+        bottomBtn.style.display = "flex"
    })
    
    body.addEventListener("keypress", e => {
-    if(e.key === "Enter") {
-        fetchAPI(text.value)
+    if(e.key === "Enter") 
+        fetchAPI(text.value),
+        bottomBtn.style.display = "flex"
     }
-   }) 
+   ) 
 
    
 

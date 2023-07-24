@@ -63,6 +63,7 @@ body {
     margin-top: 10px;
     display: flex;
     font-family: sans-serif;
+    position: absolute;
     
     
 }
@@ -98,13 +99,15 @@ body {
 /***** RIGHT SIDE ****/
 
 .right {
-    background-color: rgba(255, 255, 255, 0.822);
+    
+    background-color: rgba(255, 255, 255, 1.0);
     width: 200px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    opacity: 2;
 }
 
 
@@ -145,27 +148,48 @@ body {
 
   /*** BOTTOM SIDE ***/
     .bottom {
+        border-top: 2px solid white;
         font-family: sans-serif;
         padding-top: 10px;
         background-color: rgb(49, 156, 222);
         width: 430px;
         height: 30px;
-        display: none;
+        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        margin-top: 168px;
+        color: white;
+        transition: margin-top 0.5s ease;
         
         }
 
-    .bottom div {
-        color: white;
-        font-weight: 600;
-        
-    }
+        .bottom div {
+            padding-top: 3px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+    .bottom-btn {
+        width: 40px;
+        display: none;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        justify-content: center;
+        background-color: rgb(49, 156, 222);
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        transition: 500ms ease;
+        }
 
     .bottom-btn img {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
+    
+        filter: invert(100%) sepia(30%) saturate(2580%) hue-rotate(176deg) brightness(99%) contrast(83%);
+        
     }
+    
     
     
     
